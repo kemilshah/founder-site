@@ -1,0 +1,65 @@
+services:
+  # Express API — contact + speaking inquiry forms.
+  - type: web
+    name: founder-site-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: FRONTEND_ORIGIN
+        sync: false # set to your deployed frontend URL, e.g. https://yoursite.pages.dev
+
+  # Strapi CMS. Free plan spins down after 15 min idle (cold start on
+  # next request/admin login) — acceptable for editing content, less so
+  # for a frontend that fetches from it live. Upgrade to Starter
+  # (~$7/mo) once you want it always warm.
+  #
+  # SQLite does not survive Render's free-tier ephemeral disk — you
+  # must attach a real Postgres before deploying (Render Postgres free
+  # instance, or Supabase's free Postgres). Set DATABASE_* below to
+  # match whichever you use.
+  - type: web
+    name: founder-site-cms
+    runtime: node
+    plan: free
+    rootDir: cms
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 1337
+      - key: DATABASE_CLIENT
+        value: postgres
+      - key: DATABASE_HOST
+        sync: false
+      - key: DATABASE_PORT
+        value: 5432
+      - key: DATABASE_NAME
+        sync: false
+      - key: DATABASE_USERNAME
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: DATABASE_SSL
+        value: true
+      - key: APP_KEYS
+        generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: TRANSFER_TOKEN_SALT
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        generateValue: true
