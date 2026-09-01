@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lifestyle_images",
+  "info": {
+    "singularName": "lifestyle-image",
+    "pluralName": "lifestyle-images",
+    "displayName": "Lifestyle Image",
+    "description": "Images for the Lifestyle gallery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "caption": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

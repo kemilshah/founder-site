@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Settings",
+    "description": "Global site content: wordmark, footer, contact details"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "wordmark": {
+      "type": "string",
+      "default": "Harsh Patel"
+    },
+    "positioningStatement": {
+      "type": "text"
+    },
+    "footerBlurb": {
+      "type": "text"
+    },
+    "email": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "socialLinksNote": {
+      "type": "text"
+    },
+    "mediaKitUrl": {
+      "type": "string"
+    }
+  }
+}

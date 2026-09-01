@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_links",
+  "info": {
+    "singularName": "site-link",
+    "pluralName": "site-links",
+    "displayName": "Site Link",
+    "description": "Header and footer navigation links"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "placement": {
+      "type": "enumeration",
+      "enum": [
+        "header",
+        "footer"
+      ],
+      "required": true,
+      "default": "header"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

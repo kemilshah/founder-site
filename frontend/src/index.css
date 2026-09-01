@@ -1,0 +1,392 @@
+/* ---------------------------------------------------------------------
+   Design tokens. Dark sections work by redefining the semantic tokens
+   (--bg, --fg, --bg-2, --border, --border-strong, --figure-*) inside
+   .dark, instead of writing a `.dark .component { ... }` override for
+   every component. Components below reference the semantic tokens, not
+   --ink/--ivory directly, so .dark "just works" without per-component
+   overrides — the exceptions are the couple of places (like .btn) whose
+   hover state genuinely inverts, which stay explicit on purpose.
+   --------------------------------------------------------------------- */
+:root {
+  --ink: #0E1512;
+  --ink-2: #16201C;
+  --ivory: #F3EEE3;
+  --ivory-2: #EAE3D2;
+  --gold: #A9824C;
+  --sage: #5C6E5A;
+  --line: rgba(243, 238, 227, 0.14);
+  --line-dark: rgba(14, 21, 18, 0.12);
+
+  --display: 'Fraunces', serif;
+  --body: 'Inter', -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+
+  /* Semantic tokens (light theme) */
+  --bg: var(--ivory);
+  --fg: var(--ink);
+  --fg-muted: rgba(14, 21, 18, 0.78);
+  --bg-2: var(--ivory-2);
+  --border: var(--line-dark);
+  --figure-grad-1: var(--ivory-2);
+  --figure-grad-2: #d9cfb4;
+  --figure-fg: rgba(14, 21, 18, 0.4);
+}
+
+.dark {
+  --bg: var(--ink);
+  --fg: var(--ivory);
+  --fg-muted: rgba(243, 238, 227, 0.82);
+  --bg-2: var(--ink-2);
+  --border: var(--line);
+  --figure-grad-1: var(--ink-2);
+  --figure-grad-2: #223028;
+  --figure-fg: rgba(243, 238, 227, 0.35);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: inherit; cursor: pointer; background: none; border: none; color: inherit; }
+
+/* Visible, on-brand focus ring for keyboard users. Applied via
+   :focus-visible so mouse clicks don't show a ring, but Tab always
+   does — this replaces the old blanket `outline: none` on form
+   fields, which left keyboard users with no visible focus indicator
+   at all beyond a subtle border-color shift. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.dark { background: var(--bg); color: var(--fg); }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  line-height: 1.08;
+  margin: 0;
+}
+
+h1 { font-size: clamp(40px, 6vw, 76px); font-weight: 500; }
+h2 { font-size: clamp(30px, 4vw, 46px); font-weight: 500; }
+h3 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; }
+
+/* Solid muted color instead of opacity: opacity also fades any nested
+   element (links, <em>, <strong>) inside a paragraph, and stacks
+   unpredictably with other opacity already in play (e.g. inside a
+   .card that itself sits on a tinted background). A fixed color keeps
+   contrast predictable and doesn't affect children differently than
+   the text itself. */
+p { line-height: 1.65; font-size: 16px; color: var(--fg-muted); }
+
+.hr { border: none; border-top: 1px solid var(--border); }
+
+.section { padding: 96px 0; }
+.section-tight { padding: 64px 0; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border: 1px solid var(--fg);
+  background: transparent;
+  color: var(--fg);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn:hover { background: var(--fg); color: var(--bg); }
+
+.btn-solid {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.btn-solid:hover { background: transparent; color: var(--gold); }
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line-dark);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+.wordmark {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.nav-links a { opacity: 0.7; transition: opacity 0.15s; }
+.nav-links a:hover, .nav-links a.active { opacity: 1; border-bottom: 1px solid var(--gold); }
+
+.nav-toggle {
+  display: none;
+  padding: 8px;
+  margin: -8px;
+}
+.nav-toggle-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 22px;
+}
+.nav-toggle-bars span {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-toggle-bars.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle-bars.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle-bars.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .nav-toggle { display: block; }
+
+  /* Full-height dropdown panel instead of `display: none` with no
+     open-state — this is the actual mobile menu implementation. */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--line-dark);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .nav-links.is-open { max-height: 70vh; overflow-y: auto; }
+  .nav-links li { border-top: 1px solid var(--line-dark); }
+  .nav-links a {
+    display: block;
+    padding: 16px 32px;
+    opacity: 1;
+  }
+  .nav-links a:hover, .nav-links a.active { border-bottom: none; color: var(--gold); }
+}
+
+/* Ledger stat bar - signature element. Grid + gap draws the dividers,
+   so they stay correct on wrap in both directions (no orphaned
+   border-right on whichever item happens to land at the end of a row,
+   which is what flex + border-right produced). */
+.ledger {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-top: 48px;
+}
+.ledger-item {
+  background: var(--bg);
+  padding: 18px 20px;
+}
+.ledger-value {
+  font-family: var(--mono);
+  font-size: 22px;
+  color: var(--gold);
+}
+.ledger-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-top: 4px;
+}
+
+/* Hero */
+.hero { padding: 120px 0 80px; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: end;
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Cards / grid */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+@media (max-width: 860px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+
+.card {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.figure {
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(160deg, var(--figure-grad-1), var(--figure-grad-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--figure-fg);
+  height: auto;
+}
+.figure.wide { aspect-ratio: 16 / 9; }
+
+/* Timeline (career journey - genuinely sequential, numbering justified) */
+.timeline { border-left: 1px solid var(--border); }
+.timeline-item {
+  position: relative;
+  padding: 0 0 48px 32px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-folio {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--gold);
+  position: absolute;
+  left: -1px;
+  top: 0;
+  transform: translateX(-100%);
+  padding-right: 16px;
+  width: 60px;
+  text-align: right;
+}
+
+/* Below ~640px the absolutely-positioned folio (anchored outside the
+   left edge of .timeline) has nowhere to go — .container padding
+   shrinks and the label either clips against the viewport edge or
+   sits under the previous item's text. Stack it above the item
+   instead of beside it. */
+@media (max-width: 640px) {
+  .timeline-item { padding-left: 20px; }
+  .timeline-folio {
+    position: static;
+    display: block;
+    transform: none;
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 6px;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 64px 0 32px;
+  border-top: 1px solid var(--line);
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+/* Form */
+.field { margin-bottom: 22px; }
+.field label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--fg-muted);
+}
+.field input, .field textarea, .field select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  font-family: var(--body);
+  font-size: 16px;
+  color: inherit;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-bottom: 1px solid var(--gold);
+}
+.field textarea { resize: vertical; min-height: 120px; }
+
+.status-msg { font-family: var(--mono); font-size: 13px; margin-top: 16px; }
+.status-msg.ok { color: var(--sage); }
+.status-msg.err { color: #a9523f; }
+
+.tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  margin: 0 8px 8px 0;
+  color: var(--fg-muted);
+}

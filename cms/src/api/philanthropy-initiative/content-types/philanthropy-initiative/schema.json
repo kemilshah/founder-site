@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "philanthropy_initiatives",
+  "info": {
+    "singularName": "philanthropy-initiative",
+    "pluralName": "philanthropy-initiatives",
+    "displayName": "Philanthropy Initiative",
+    "description": "Causes and initiatives"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false
+    }
+  }
+}

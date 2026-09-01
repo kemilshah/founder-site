@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "past_engagements",
+  "info": {
+    "singularName": "past-engagement",
+    "pluralName": "past-engagements",
+    "displayName": "Past Engagement",
+    "description": "Past speaking engagements"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventName": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

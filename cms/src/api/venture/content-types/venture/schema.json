@@ -1,0 +1,16 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ventures",
+  "info": { "singularName": "venture", "pluralName": "ventures", "displayName": "Venture", "description": "Business ventures shown on the Ventures page" },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": {},
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "industry": { "type": "string" },
+    "stage": { "type": "string" },
+    "summary": { "type": "text" },
+    "url": { "type": "string" },
+    "order": { "type": "integer", "default": 0 },
+    "logo": { "type": "media", "allowedTypes": ["images"], "multiple": false }
+  }
+}
