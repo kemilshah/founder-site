@@ -12,7 +12,7 @@ const FALLBACK = {
     { value: '[00]', label: 'Board Seats' },
     { value: '[00]', label: 'Publications' },
   ],
-  seoTitle: 'Achievements — Harsh Patel',
+  seoTitle: 'Achievements — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — achievements page meta description]',
 };
 

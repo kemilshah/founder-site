@@ -7,7 +7,7 @@ const FALLBACK = {
   heading: 'Interviews, features, and coverage.',
   secondaryHeading: 'Media Kit',
   secondaryBody: 'Approved headshots, bio, and press assets available on request.',
-  seoTitle: 'Media & Press — Harsh Patel',
+  seoTitle: 'Media & Press — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — media page meta description]',
 };
 

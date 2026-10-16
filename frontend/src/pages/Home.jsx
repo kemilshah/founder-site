@@ -18,7 +18,7 @@ const FALLBACK = {
     { value: '[00]', label: 'Countries' },
     { value: '[00]', label: 'Press Features' },
   ],
-  seoTitle: 'Harsh Patel — Founder, Investor, Operator',
+  seoTitle: 'Kemil Shah — Founder, Investor, Operator',
   seoDescription: '[CONTENT TO BE PROVIDED — home page meta description]',
 };
 

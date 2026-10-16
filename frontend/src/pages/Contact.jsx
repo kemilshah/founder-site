@@ -7,7 +7,7 @@ const FALLBACK = {
   eyebrow: 'Contact',
   heading: 'Get in touch.',
   intro: 'For business inquiries, press, or general questions — lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  seoTitle: 'Contact — Harsh Patel',
+  seoTitle: 'Contact — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — contact page meta description]',
 };
 

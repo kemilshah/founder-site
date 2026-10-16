@@ -5,7 +5,7 @@ import { getVentures, mediaUrl } from '../lib/cms.js';
 const FALLBACK = {
   eyebrow: 'Business Ventures',
   heading: 'A portfolio of companies across [CONTENT TO BE PROVIDED — industries].',
-  seoTitle: 'Business Ventures — Harsh Patel',
+  seoTitle: 'Business Ventures — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — ventures page meta description]',
 };
 

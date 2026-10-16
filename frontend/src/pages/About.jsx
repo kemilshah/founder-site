@@ -7,7 +7,7 @@ const FALLBACK = {
   heading: 'Lorem ipsum dolor sit amet consectetur adipiscing.',
   intro:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  seoTitle: 'About — Harsh Patel',
+  seoTitle: 'About — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — about page meta description]',
 };
 

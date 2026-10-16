@@ -11,7 +11,7 @@ const FALLBACK = {
     { value: '[00]', label: 'Years Involved' },
     { value: '[00]', label: 'Partner Organizations' },
   ],
-  seoTitle: 'Philanthropy — Harsh Patel',
+  seoTitle: 'Philanthropy — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — philanthropy page meta description]',
 };
 

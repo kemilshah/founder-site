@@ -8,7 +8,7 @@ const FALLBACK = {
   heading: 'Available for keynotes, panels, and fireside chats.',
   secondaryHeading: 'Selected Stages',
   secondaryBody: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  seoTitle: 'Speaking & Events — Harsh Patel',
+  seoTitle: 'Speaking & Events — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — speaking page meta description]',
 };
 

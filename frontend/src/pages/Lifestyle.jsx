@@ -8,7 +8,7 @@ const FALLBACK = {
   intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   secondaryHeading: '[CONTENT TO BE PROVIDED — feature headline]',
   secondaryBody: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  seoTitle: 'Lifestyle — Harsh Patel',
+  seoTitle: 'Lifestyle — Kemil Shah',
   seoDescription: '[CONTENT TO BE PROVIDED — lifestyle page meta description]',
 };
 
