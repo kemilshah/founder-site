@@ -46,7 +46,11 @@ export default function Lifestyle() {
 
       <section className="section-tight dark">
         <div className="container grid-2" style={{ alignItems: 'center' }}>
-          <div className="figure wide">[FEATURE IMAGE]</div>
+          {mediaUrl(content.pageImage) ? (
+            <img src={mediaUrl(content.pageImage)} alt="" className="figure wide" style={{ objectFit: 'cover' }} />
+          ) : (
+            <div className="figure wide">[FEATURE IMAGE]</div>
+          )}
           <div>
             <div className="eyebrow">Off Duty</div>
             <h2 style={{ marginTop: 16 }}>{content.secondaryHeading}</h2>

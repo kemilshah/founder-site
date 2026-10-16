@@ -50,7 +50,11 @@ export default function Home() {
       <section className="section dark">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
-            <div className="figure">[FOUNDER PORTRAIT]</div>
+            {mediaUrl(content.pageImage) ? (
+              <img src={mediaUrl(content.pageImage)} alt="Kemil Shah" className="figure" style={{ objectFit: 'cover' }} />
+            ) : (
+              <div className="figure">[FOUNDER PORTRAIT]</div>
+            )}
             <div>
               <div className="eyebrow">The Story</div>
               <h2 style={{ marginTop: 16 }}>{content.secondaryHeading}</h2>

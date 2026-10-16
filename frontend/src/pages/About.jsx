@@ -1,6 +1,6 @@
 import { useSeo } from '../lib/useSeo.js';
 import { useCmsPage, useCmsList } from '../lib/useCms.js';
-import { getTimelineEntries, getValues } from '../lib/cms.js';
+import { getTimelineEntries, getValues, mediaUrl } from '../lib/cms.js';
 
 const FALLBACK = {
   eyebrow: 'About',
@@ -42,7 +42,11 @@ export default function About() {
 
       <section className="section-tight">
         <div className="container grid-2">
-          <div className="figure">[FOUNDER PORTRAIT — EDITORIAL]</div>
+          {mediaUrl(content.pageImage) ? (
+            <img src={mediaUrl(content.pageImage)} alt="Kemil Shah" className="figure" style={{ objectFit: 'cover' }} />
+          ) : (
+            <div className="figure">[FOUNDER PORTRAIT — EDITORIAL]</div>
+          )}
           <div>
             <p>{content.intro}</p>
           </div>
