@@ -43,6 +43,13 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.stat"
+    },
+    "pageImage": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false
     }
   }
 }
