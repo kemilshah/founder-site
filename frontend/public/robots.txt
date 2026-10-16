@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://harshpatel.me/sitemap.xml
+Sitemap: https://kemilshah.com/sitemap.xml

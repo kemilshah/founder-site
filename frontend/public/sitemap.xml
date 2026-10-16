@@ -2,13 +2,13 @@
 <!-- Placeholder sitemap. Generate this dynamically at build/deploy time
      once real routes and last-modified dates are known (see spec Section 19). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://harshpatel.me/</loc></url>
-  <url><loc>https://harshpatel.me/about</loc></url>
-  <url><loc>https://harshpatel.me/ventures</loc></url>
-  <url><loc>https://harshpatel.me/achievements</loc></url>
-  <url><loc>https://harshpatel.me/media</loc></url>
-  <url><loc>https://harshpatel.me/lifestyle</loc></url>
-  <url><loc>https://harshpatel.me/philanthropy</loc></url>
-  <url><loc>https://harshpatel.me/speaking</loc></url>
-  <url><loc>https://harshpatel.me/contact</loc></url>
+  <url><loc>https://kemilshah.com/</loc></url>
+  <url><loc>https://kemilshah.com/about</loc></url>
+  <url><loc>https://kemilshah.com/ventures</loc></url>
+  <url><loc>https://kemilshah.com/achievements</loc></url>
+  <url><loc>https://kemilshah.com/media</loc></url>
+  <url><loc>https://kemilshah.com/lifestyle</loc></url>
+  <url><loc>https://kemilshah.com/philanthropy</loc></url>
+  <url><loc>https://kemilshah.com/speaking</loc></url>
+  <url><loc>https://kemilshah.com/contact</loc></url>
 </urlset>
