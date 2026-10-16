@@ -12,7 +12,7 @@ export async function notify(subject, body) {
   // import { Resend } from 'resend';
   // const resend = new Resend(process.env.RESEND_API_KEY);
   // await resend.emails.send({
-  //   from: 'noreply@harshpatel.me',
+  //   from: 'noreply@kemilshah.com',
   //   to: process.env.NOTIFY_EMAIL,
   //   subject,
   //   text: body,
