@@ -16,7 +16,7 @@ const FALLBACK_LINKS = [
 
 export default function Nav() {
   const [links, setLinks] = useState(FALLBACK_LINKS);
-  const [wordmark, setWordmark] = useState('Harsh Patel');
+  const [wordmark, setWordmark] = useState('Kemil Shah');
   const [open, setOpen] = useState(false);
   const location = useLocation();
 

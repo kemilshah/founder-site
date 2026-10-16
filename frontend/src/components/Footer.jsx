@@ -9,7 +9,7 @@ const FALLBACK_LINKS = [
 ];
 
 const FALLBACK_SETTINGS = {
-  wordmark: 'Harsh Patel',
+  wordmark: 'Kemil Shah',
   footerBlurb: '[CONTENT TO BE PROVIDED — one-line founder positioning statement]',
   email: '[CONTENT TO BE PROVIDED — email]',
   socialLinksNote: '[CONTENT TO BE PROVIDED — social / press URLs]',
