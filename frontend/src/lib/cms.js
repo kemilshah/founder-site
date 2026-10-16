@@ -13,7 +13,7 @@ async function strapiFetch(path) {
 }
 
 export function getPage(slug) {
-  return strapiFetch(`/pages?filters[slug][$eq]=${encodeURIComponent(slug)}`).then(
+  return strapiFetch(`/pages?filters[slug][$eq]=${encodeURIComponent(slug)}&populate=*`).then(
     (rows) => rows?.[0] ?? null
   );
 }
