@@ -43,7 +43,7 @@ async function seedIfEmpty(strapi) {
         { value: '[00]', label: 'Countries' },
         { value: '[00]', label: 'Press Features' },
       ],
-      seoTitle: 'Harsh Patel — Founder, Investor, Operator',
+      seoTitle: 'Kemil Shah — Founder, Investor, Operator',
       seoDescription: '[CONTENT TO BE PROVIDED — home page meta description]',
     },
     {
@@ -51,14 +51,14 @@ async function seedIfEmpty(strapi) {
       eyebrow: 'About',
       heading: 'Lorem ipsum dolor sit amet consectetur adipiscing.',
       intro: lorem,
-      seoTitle: 'About — Harsh Patel',
+      seoTitle: 'About — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — about page meta description]',
     },
     {
       slug: 'ventures',
       eyebrow: 'Business Ventures',
       heading: 'A portfolio of companies across [CONTENT TO BE PROVIDED — industries].',
-      seoTitle: 'Business Ventures — Harsh Patel',
+      seoTitle: 'Business Ventures — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — ventures page meta description]',
     },
     {
@@ -71,7 +71,7 @@ async function seedIfEmpty(strapi) {
         { value: '[00]', label: 'Board Seats' },
         { value: '[00]', label: 'Publications' },
       ],
-      seoTitle: 'Achievements — Harsh Patel',
+      seoTitle: 'Achievements — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — achievements page meta description]',
     },
     {
@@ -80,7 +80,7 @@ async function seedIfEmpty(strapi) {
       heading: 'Interviews, features, and coverage.',
       secondaryHeading: 'Media Kit',
       secondaryBody: 'Approved headshots, bio, and press assets available on request.',
-      seoTitle: 'Media & Press — Harsh Patel',
+      seoTitle: 'Media & Press — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — media page meta description]',
     },
     {
@@ -90,7 +90,7 @@ async function seedIfEmpty(strapi) {
       intro: lorem,
       secondaryHeading: '[CONTENT TO BE PROVIDED — feature headline]',
       secondaryBody: lorem,
-      seoTitle: 'Lifestyle — Harsh Patel',
+      seoTitle: 'Lifestyle — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — lifestyle page meta description]',
     },
     {
@@ -102,7 +102,7 @@ async function seedIfEmpty(strapi) {
         { value: '[00]', label: 'Years Involved' },
         { value: '[00]', label: 'Partner Organizations' },
       ],
-      seoTitle: 'Philanthropy — Harsh Patel',
+      seoTitle: 'Philanthropy — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — philanthropy page meta description]',
     },
     {
@@ -111,7 +111,7 @@ async function seedIfEmpty(strapi) {
       heading: 'Available for keynotes, panels, and fireside chats.',
       secondaryHeading: 'Selected Stages',
       secondaryBody: lorem,
-      seoTitle: 'Speaking & Events — Harsh Patel',
+      seoTitle: 'Speaking & Events — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — speaking page meta description]',
     },
     {
@@ -119,7 +119,7 @@ async function seedIfEmpty(strapi) {
       eyebrow: 'Contact',
       heading: 'Get in touch.',
       intro: 'For business inquiries, press, or general questions — lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      seoTitle: 'Contact — Harsh Patel',
+      seoTitle: 'Contact — Kemil Shah',
       seoDescription: '[CONTENT TO BE PROVIDED — contact page meta description]',
     },
   ];
@@ -151,7 +151,7 @@ async function seedIfEmpty(strapi) {
 
   await strapi.documents('api::site-setting.site-setting').create({
     data: {
-      wordmark: 'Harsh Patel',
+      wordmark: 'Kemil Shah',
       positioningStatement: '[CONTENT TO BE PROVIDED — one-line founder positioning statement]',
       footerBlurb: '[CONTENT TO BE PROVIDED — one-line founder positioning statement]',
       email: '[CONTENT TO BE PROVIDED — email address]',
