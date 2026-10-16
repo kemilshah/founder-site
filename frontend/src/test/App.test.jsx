@@ -10,7 +10,7 @@ describe('App', () => {
         <App />
       </MemoryRouter>
     );
-    expect(screen.getByRole('link', { name: 'Harsh Patel' })).toHaveAttribute('href', '/');
+    expect(screen.getByRole('link', { name: 'Kemil Shah' })).toHaveAttribute('href', '/');
   });
 
   it('renders the Ventures page heading on /ventures', () => {
