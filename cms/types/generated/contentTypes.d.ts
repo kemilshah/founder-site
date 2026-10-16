@@ -709,7 +709,7 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     wordmark: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'Harsh Patel'>;
+      Schema.Attribute.DefaultTo<'Kemil Shah'>;
   };
 }
 
