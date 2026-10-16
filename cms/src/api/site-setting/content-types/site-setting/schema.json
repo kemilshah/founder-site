@@ -14,7 +14,7 @@
   "attributes": {
     "wordmark": {
       "type": "string",
-      "default": "Harsh Patel"
+      "default": "Kemil Shah"
     },
     "positioningStatement": {
       "type": "text"
